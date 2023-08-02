@@ -1,12 +1,22 @@
 import { React, useState, useEffect, useMemo} from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./form.css";
-
+import axios from 'axios';
 const Form = () => {
   const navigate = useNavigate();
   const signClick=()=>{
-    navigate('/daytask');
-    console.log("button working");
+    axios.post('https://task-manager-backendauth.onrender.com/login', {
+      email: formData.email,
+      password: formData.password,
+    })
+    .then((response) => {
+      console.log('Login successful:', response.data);
+      // Redirect to another page after successful login
+      navigate('/daytask');
+    })
+    .catch((error) => {
+      console.error('Login error:', error);
+    });
   } 
   const initialFormData = useMemo(() => ({
     email: '',
