@@ -5,7 +5,7 @@ import axios from 'axios';
 const Form = () => {
   const navigate = useNavigate();
   const signClick=()=>{
-    axios.post('https://task-manager-backendauth.onrender.com/login', {
+    axios.post('https://task-manager-backendauth.onrender.com/signin', {
       email: formData.email,
       password: formData.password,
     })

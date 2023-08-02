@@ -8,7 +8,7 @@ const Form = () => {
   const loginClick = () => {
     // Handle login click here
     // Example: Call your login API endpoint using Axios
-    axios.post('https://task-manager-backendauth.onrender.com/signup', {
+    axios.post('https://task-manager-backendauth.onrender.com/login', {
       name: formData.name,
       email: formData.email,
       password: formData.password,
