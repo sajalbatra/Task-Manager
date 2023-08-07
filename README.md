@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# To-Do List Application with Authentication
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a To-Do List application that allows users to manage their tasks for the day. The application provides authentication functionality, ensuring that only registered users can access the day task page. The project is built using the MERN stack, which stands for MongoDB, Express.js, React.js, and Node.js.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- User Registration: New users can sign up and create an account to access the application.
+- User Login: Registered users can log in with their credentials.
+- Day Task Page: Once logged in, users can view and manage their daily tasks.
+- Add Tasks: Users can add new tasks to their day task list.
+- Edit Tasks: Users can edit existing tasks, update details, or mark tasks as complete.
+- Delete Tasks: Users can remove tasks from their day task list.
+- User Authentication: Only authenticated users can access the day task page.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- MongoDB: A NoSQL database used to store user information and task data.
+- Express.js: A backend web application framework for Node.js used to build the server-side logic.
+- React.js: A frontend JavaScript library used to build the user interface and components.
+- Node.js: A JavaScript runtime used for server-side development.
+- Mongoose: A MongoDB object modeling tool for Node.js, used to interact with the MongoDB database.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Prerequisites
 
-### `npm test`
+Before running the application, ensure you have the following software installed on your system:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Node.js: You can download Node.js from the official website: https://nodejs.org/
+2. MongoDB: Install MongoDB Community Edition: https://www.mongodb.com/try/download/community
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone this repository to your local machine:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone <repository_url.git>
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navigate to the project directory:
 
-### `npm run eject`
+```bash
+cd to-do-list-application
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install server-side dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+cd server
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Install client-side dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+cd client
+npm install
+```
 
-## Learn More
+5. Create a `.env` file in the server directory and add the following environment variables:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+MONGODB_URI=<your_mongodb_connection_string>
+SESSION_SECRET=<your_session_secret_key>
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Replace `<your_mongodb_connection_string>` with your MongoDB database connection string, and `<your_session_secret_key>` with a secret key for session management.
 
-### Code Splitting
+## Running the Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Start the server:
 
-### Analyzing the Bundle Size
+```bash
+cd server
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This will start the server on `http://localhost:5000`.
 
-### Making a Progressive Web App
+2. Start the client:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+cd client
+npm start
+```
 
-### Advanced Configuration
+This will start the React development server on `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+3. Open your web browser and go to `http://localhost:3000` to access the application.
 
-### Deployment
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. Create an account by clicking on the "Sign Up" link and filling out the registration form.
+2. Log in with your registered credentials on the "Log In" page.
+3. Once logged in, you will be redirected to the "Day Task" page.
+4. Here you can view, add, edit, and delete your daily tasks.
 
-### `npm run build` fails to minify
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you want to contribute to this project, you are welcome to submit pull requests. Please ensure that your changes are well-documented and tested.
+
+
+## Acknowledgments
+
+- Thanks to the MERN stack community for providing excellent tools and resources.
+- Thanks to all the contributors who helped make this project better.
